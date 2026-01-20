@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaQ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <style>
+        body{
+            margin: 0 auto;
+            background-color: rgb(228, 228, 228);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Be Vietnam Pro';
+        }
+        .container{
+            width: 60%;
+            height: 60%;
+            background-color: aliceblue;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .wrap{
+            width: 100%;
+            max-width: 90%;
+            background-color: rgb(156, 198, 223);
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 10px;
+            gap: 10px;
+        }
+
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .closeBtn{
+            height: 24px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+        .closeBtn img{
+            height: 24px;
+        }
+        .closeBtn.active{
+            transform: rotate(180deg);
+        }
+
+
+        .answer{
+            display: none;
+        }
+        .answer.show{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Top những câu hỏi ngớ ngẩn</h1>
+        <div class="wrap">
+            <div class="question">
+                <div class="ques">How are you?</div>
+                <div class="closeBtn" onclick="openFaQ(this)"><img src="./arrow_drop_down_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></div>
+            </div>
+            <div class="answer">I'm facking fine!</div>
+        </div>
+
+        <div class="wrap">
+            <div class="question">
+                <div class="ques">How are you?</div>
+                <div class="closeBtn" onclick="openFaQ(this)"><img src="./arrow_drop_down_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></div>
+            </div>
+            <div class="answer">I'm facking fine!</div>
+        </div>
+
+        <div class="wrap">
+            <div class="question">
+                <div class="ques">How are you?</div>
+                <div class="closeBtn" onclick="openFaQ(this)"><img src="./arrow_drop_down_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></div>
+            </div>
+            <div class="answer">I'm facking fine!</div>
+        </div>
+
+        <div class="wrap">
+            <div class="question">
+                <div class="ques">How are you?</div>
+                <div class="closeBtn" onclick="openFaQ(this)"><img src="./arrow_drop_down_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></div>
+            </div>
+            <div class="answer">I'm facking fine!</div>
+        </div>
+        
+        <div class="wrap">
+            <div class="question">
+                <div class="ques">How are you?</div>
+                <div class="closeBtn" onclick="openFaQ(this)"><img src="./arrow_drop_down_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></div>
+            </div>
+            <div class="answer">I'm facking fine!</div>
+        </div>
+    </div>
+    <script>
+        function openFaQ(element){
+            
+            element.classList.toggle("active");
+
+            const parent = element.closest('.wrap');
+            const ans = parent.querySelector(".answer");
+
+            ans.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
