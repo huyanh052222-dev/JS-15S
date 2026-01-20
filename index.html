@@ -22,6 +22,7 @@
             margin: 0 auto;
             background-color: rgb(228, 228, 228);
             height: 100vh;
+            height: -webkit-fill-available;
             height: 100svh;
             width: 100vw;
             display: -webkit-box;
@@ -34,6 +35,8 @@
                 -ms-flex-align: center;
                     align-items: center;
             font-family: 'Be Vietnam Pro';
+            padding: 20px 0;
+            box-sizing: border-box;
         }
         h1{
             -webkit-box-sizing: border-box;
@@ -44,7 +47,7 @@
         .container{
             width: 100%;
             max-width: 90%;
-            height: 70%;
+            max-height: 90%;
             background-color: aliceblue;
             border-radius: 20px;
             display: -webkit-box;
@@ -61,6 +64,11 @@
                 -ms-flex-direction: column;
                     flex-direction: column;
             gap: 10px;
+
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            justify-content: flex-start;
+            align-items: center;
         }
 
         .wrap{
